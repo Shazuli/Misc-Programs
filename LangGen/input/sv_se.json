@@ -1,0 +1,45 @@
+{
+
+    "domain": "intercraftcore",
+
+    "types": [
+        { "ingot" : "%stacka" },
+        { "nugget" : "%sklimp" },
+        { "dust" : "%spulver" },
+        { "dustsmall" : "Liten del %spulver" },
+        { "plate" : "%splatta" }
+    ],
+
+    "elements": [
+        { "ag" : "Silver" },
+        { "al" : "Aluminium" },
+        { "au" : "Guld",
+            "filter": [ "ingot", "nugget" ]
+        },
+        { "cu" : "Koppar" },
+        { "fe" : "Järn",
+            "filter": [ "ingot", "nugget" ]
+        },
+        { "hg" : "Kvicksilver",
+            "filter": [ "none" ] },
+        { "ir" : "Iridium" },
+        { "li" : "Litium" },
+        { "pb" : "Bly" },
+        { "sn" : "Tenn" },
+        { "th" : "Torium" },
+        { "ti" : "Titanium" },
+        { "u" : "Uranium" },
+        { "w" : "Wolfram" },
+        { "zn" : "Zink" },
+
+        { "c" : "Kol",
+            "filter": [ "plate" ] },
+        { "si" : "Kisel",
+            "filter": [ "ingot", "nugget", "plate" ] },
+
+        { "cusn" : "Brons" },
+        { "cuzn" : "Mässing" },
+        { "fec" : "Stål" }
+
+    ]
+}

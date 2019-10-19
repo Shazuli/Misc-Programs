@@ -1,0 +1,16 @@
+srcfiles := $(shell find . -path .build -prune -o -type f -name '*.lua' -print)
+dstfiles := $(addprefix .build/,$(srcfiles))
+
+.PHONY: compress clean deploy
+
+compress: $(dstfiles)
+
+$(dstfiles): .build/%: %
+	mkdir -p $(dir $@)
+	luamin -f $< > $@
+
+clean:
+	rm -rf ./.build
+
+deploy: .build
+	cp -R ./.build/* ~

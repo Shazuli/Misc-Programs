@@ -1,0 +1,45 @@
+{
+
+    "domain": "intercraftcore",
+
+    "types": [
+        { "ingot" : "%s Ingot" },
+        { "nugget" : "%s Nugget" },
+        { "dust" : "%s Dust" },
+        { "dustsmall" : "Tiny Pile of %s" },
+        { "plate" : "%s Plate" }
+    ],
+
+    "elements": [
+        { "ag" : "Silver" },
+        { "al" : "Aluminium" },
+        { "au" : "Gold",
+            "filter": [ "ingot", "nugget" ]
+        },
+        { "cu" : "Copper" },
+        { "fe" : "Iron",
+            "filter": [ "ingot", "nugget" ]
+        },
+        { "hg" : "Mercury",
+            "filter": [ "none" ] },
+        { "ir" : "Iridium" },
+        { "li" : "Lithium" },
+        { "pb" : "Lead" },
+        { "sn" : "Tin" },
+        { "th" : "Thorium" },
+        { "ti" : "Titanium" },
+        { "u" : "Uranium" },
+        { "w" : "Tungsten" },
+        { "zn" : "Zinc" },
+
+        { "c" : "Carbon",
+            "filter": [ "plate" ] },
+        { "si" : "Silicon",
+            "filter": [ "ingot", "nugget", "plate" ] },
+
+        { "cusn" : "Bronze" },
+        { "cuzn" : "Brass" },
+        { "fec" : "Steel" }
+
+    ]
+}
