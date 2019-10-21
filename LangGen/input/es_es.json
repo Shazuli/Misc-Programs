@@ -1,0 +1,51 @@
+{
+
+    "domain": "intercraftcore",
+
+    "types": [
+        { "ingot" : "Lingote de %s" },
+        { "nugget" : "Pepita de %s" },
+        { "dust" : "Polvo de %s" },
+        { "dustsmall" : "Pila de %s" },
+        { "plate" : "Lámina de %s" },
+        { "gear" : "%s Gear" },
+        { "rod" : "%s Rod" },
+        { "block" : "%s Block", "isBlock" : true },
+        { "frame" : "%s Frame", "isBlock" : true },
+        { "chunk" : "%s Chunk" },
+        { "ore" : "%s Ore", "isBlock" : true }
+    ],
+
+    "elements": [
+        { "ag" : "Plata" },
+        { "al" : "Aluminio" },
+        { "au" : "Oro",
+            "filter": [ "ingot","nugget","block" ]
+        },
+        { "cu" : "Cobre" },
+        { "fe" : "Hierro",
+            "filter": [ "ingot","nugget","block" ]
+        },
+        { "hg" : "Mercurio",
+            "filter": [ "none" ] },
+        { "ir" : "Iridio" },
+        { "li" : "Litio" },
+        { "pb" : "Plomo" },
+        { "sn" : "Estaño" },
+        { "th" : "Torio" },
+        { "ti" : "Titanio" },
+        { "u" : "Uranio" },
+        { "w" : "Tungsteno" },
+        { "zn" : "Zinc" },
+
+        { "c" : "Carbón",
+            "filter": [ "plate","gear","frame" ] },
+        { "si" : "Silicio",
+            "filter": [ "ingot","nugget","plate","gear","frame" ] },
+
+        { "cusn" : "Bronce" },
+        { "cuzn" : "Latón" },
+        { "fec" : "Acero" }
+
+    ]
+}

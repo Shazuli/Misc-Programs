@@ -7,18 +7,24 @@
         { "nugget" : "%s Nugget" },
         { "dust" : "%s Dust" },
         { "dustsmall" : "Tiny Pile of %s" },
-        { "plate" : "%s Plate" }
+        { "plate" : "%s Plate" },
+        { "gear" : "%s Gear" },
+        { "rod" : "%s Rod" },
+        { "block" : "%s Block", "isBlock" : true },
+        { "frame" : "%s Frame", "isBlock" : true },
+        { "chunk" : "%s Chunk" },
+        { "ore" : "%s Ore", "isBlock" : true }
     ],
 
     "elements": [
         { "ag" : "Silver" },
         { "al" : "Aluminium" },
         { "au" : "Gold",
-            "filter": [ "ingot", "nugget" ]
+            "filter": [ "ingot","nugget","block" ]
         },
         { "cu" : "Copper" },
         { "fe" : "Iron",
-            "filter": [ "ingot", "nugget" ]
+            "filter": [ "ingot","nugget","block" ]
         },
         { "hg" : "Mercury",
             "filter": [ "none" ] },
@@ -33,9 +39,9 @@
         { "zn" : "Zinc" },
 
         { "c" : "Carbon",
-            "filter": [ "plate" ] },
+            "filter": [ "plate","gear","frame" ] },
         { "si" : "Silicon",
-            "filter": [ "ingot", "nugget", "plate" ] },
+            "filter": [ "ingot","nugget","plate","gear","frame" ] },
 
         { "cusn" : "Bronze" },
         { "cuzn" : "Brass" },

@@ -7,18 +7,23 @@
         { "nugget" : "%s Klumpen" },
         { "dust" : "%s Staub" },
         { "dustsmall" : "Kleine prise %s" },
-        { "plate" : "%s Platte" }
+        { "plate" : "%s Platte" },
+        { "rod" : "%s Rod" },
+        { "block" : "%s Block", "isBlock" : true },
+        { "frame" : "%s Frame", "isBlock" : true },
+        { "chunk" : "%s Chunk" },
+        { "ore" : "%s Ore", "isBlock" : true }
     ],
 
     "elements": [
         { "ag" : "Silber" },
         { "al" : "Aluminium" },
         { "au" : "Gold",
-            "filter": [ "ingot", "nugget" ]
+            "filter": [ "ingot", "nugget", "block" ]
         },
         { "cu" : "Kupfer" },
         { "fe" : "Eisen",
-            "filter": [ "ingot", "nugget" ]
+            "filter": [ "ingot", "nugget", "block" ]
         },
         { "hg" : "Quecksilber",
             "filter": [ "none" ] },
@@ -33,9 +38,9 @@
         { "zn" : "Zink" },
 
         { "c" : "Kohlenstoff",
-            "filter": [ "plate" ] },
+            "filter": [ "plate", "gear", "rod", "frame" ] },
         { "si" : "Silizium",
-            "filter": [ "ingot", "nugget", "plate" ] },
+            "filter": [ "ingot", "nugget", "plate", "gear", "rod", "frame" ] },
 
         { "cusn" : "Bronze" },
         { "cuzn" : "Messing" },

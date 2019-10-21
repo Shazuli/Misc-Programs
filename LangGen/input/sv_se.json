@@ -7,18 +7,24 @@
         { "nugget" : "%sklimp" },
         { "dust" : "%spulver" },
         { "dustsmall" : "Liten del %spulver" },
-        { "plate" : "%splatta" }
+        { "plate" : "%splatta" },
+        { "gear" : "%skughjul" },
+        { "rod" : "%sstång" },
+        { "block" : "%sblock", "isBlock" : true },
+        { "frame" : "%sram", "isBlock" : true },
+        { "chunk" : "%sbit" },
+        { "ore" : "%smalm", "isBlock" : true }
     ],
 
     "elements": [
         { "ag" : "Silver" },
         { "al" : "Aluminium" },
         { "au" : "Guld",
-            "filter": [ "ingot", "nugget" ]
+            "filter": [ "ingot","nugget","block" ]
         },
         { "cu" : "Koppar" },
         { "fe" : "Järn",
-            "filter": [ "ingot", "nugget" ]
+            "filter": [ "ingot","nugget","block" ]
         },
         { "hg" : "Kvicksilver",
             "filter": [ "none" ] },
@@ -33,9 +39,9 @@
         { "zn" : "Zink" },
 
         { "c" : "Kol",
-            "filter": [ "plate" ] },
+            "filter": [ "plate","gear","frame" ] },
         { "si" : "Kisel",
-            "filter": [ "ingot", "nugget", "plate" ] },
+            "filter": [ "ingot","nugget","plate","gear","frame" ] },
 
         { "cusn" : "Brons" },
         { "cuzn" : "Mässing" },
