@@ -10,10 +10,10 @@
         { "plate" : "%splatta" },
         { "gear" : "%skughjul" },
         { "rod" : "%sstång" },
-        { "block" : "%sblock", "isBlock" : true },
-        { "frame" : "%sram", "isBlock" : true },
-        { "chunk" : "%sbit" },
-        { "ore" : "%smalm", "isBlock" : true }
+        { "chunk" : "%sbit", "flag" : "chunk" },
+        { "block" : "%sblock", "flag" : "block" },
+        { "frame" : "%sram", "flag" : "block" },
+        { "ore" : "%smalm", "flag" : "block" }
     ],
 
     "elements": [
@@ -39,13 +39,16 @@
         { "zn" : "Zink" },
 
         { "c" : "Kol",
-            "filter": [ "plate","gear","frame" ] },
+            "filter": [ "plate","gear","chunk","frame" ] },
         { "si" : "Kisel",
-            "filter": [ "ingot","nugget","plate","gear","frame" ] },
+            "filter": [ "ingot","nugget","plate","gear","chunk","frame" ] },
 
-        { "cusn" : "Brons" },
-        { "cuzn" : "Mässing" },
-        { "fec" : "Stål" }
+        { "cusn" : "Brons",
+            "filter": [ "chunk","ore" ] },
+        { "cuzn" : "Mässing",
+            "filter": [ "chunk","ore" ] },
+        { "fec" : "Stål",
+            "filter": [ "chunk","ore" ] }
 
     ]
 }

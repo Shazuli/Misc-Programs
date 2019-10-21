@@ -8,11 +8,12 @@
         { "dust" : "%s Staub" },
         { "dustsmall" : "Kleine prise %s" },
         { "plate" : "%s Platte" },
+        { "gear" : "%s Gear" },
         { "rod" : "%s Rod" },
-        { "block" : "%s Block", "isBlock" : true },
-        { "frame" : "%s Frame", "isBlock" : true },
-        { "chunk" : "%s Chunk" },
-        { "ore" : "%s Ore", "isBlock" : true }
+        { "chunk" : "%s Chunk", "flag" : "chunk" },
+        { "block" : "%s Block", "flag" : "block" },
+        { "frame" : "%s Frame", "flag" : "block" },
+        { "ore" : "%s Ore", "flag" : "block" }
     ],
 
     "elements": [
@@ -38,13 +39,16 @@
         { "zn" : "Zink" },
 
         { "c" : "Kohlenstoff",
-            "filter": [ "plate", "gear", "rod", "frame" ] },
+            "filter": [ "plate","gear","chunk","frame" ] },
         { "si" : "Silizium",
-            "filter": [ "ingot", "nugget", "plate", "gear", "rod", "frame" ] },
+            "filter": [ "ingot","nugget","plate","gear","chunk","frame" ] },
 
-        { "cusn" : "Bronze" },
-        { "cuzn" : "Messing" },
-        { "fec" : "Stahl" }
+        { "cusn" : "Bronze",
+            "filter": [ "chunk","ore" ] },
+        { "cuzn" : "Messing",
+            "filter": [ "chunk","ore" ] },
+        { "fec" : "Stahl",
+            "filter": [ "chunk","ore" ] }
 
     ]
 }

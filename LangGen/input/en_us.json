@@ -10,10 +10,10 @@
         { "plate" : "%s Plate" },
         { "gear" : "%s Gear" },
         { "rod" : "%s Rod" },
-        { "block" : "%s Block", "isBlock" : true },
-        { "frame" : "%s Frame", "isBlock" : true },
-        { "chunk" : "%s Chunk" },
-        { "ore" : "%s Ore", "isBlock" : true }
+        { "chunk" : "%s Chunk", "flag" : "chunk" },
+        { "block" : "%s Block", "flag" : "block" },
+        { "frame" : "%s Frame", "flag" : "block" },
+        { "ore" : "%s Ore", "flag" : "block" }
     ],
 
     "elements": [
@@ -39,13 +39,16 @@
         { "zn" : "Zinc" },
 
         { "c" : "Carbon",
-            "filter": [ "plate","gear","frame" ] },
+            "filter": [ "plate","gear","chunk","frame" ] },
         { "si" : "Silicon",
-            "filter": [ "ingot","nugget","plate","gear","frame" ] },
+            "filter": [ "ingot","nugget","plate","gear","chunk","frame" ] },
 
-        { "cusn" : "Bronze" },
-        { "cuzn" : "Brass" },
-        { "fec" : "Steel" }
+        { "cusn" : "Bronze",
+            "filter": [ "chunk","ore" ] },
+        { "cuzn" : "Brass",
+            "filter": [ "chunk","ore" ] },
+        { "fec" : "Steel",
+            "filter": [ "chunk","ore" ] }
 
     ]
 }
