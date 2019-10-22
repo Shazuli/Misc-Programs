@@ -10,11 +10,15 @@
 const fs = require('fs');
 
 
-const lang      = 'de_de.json'; // Change this to the desired language file name in input/.
-const spacing   = 2;            // The desired spacing in the output file.
-const separated = true;         // If the flagged types should be separated or mixed in the output file.
+const lang          = 'en_us.json'; // Change this to the desired language file name in input/.
+const spacing       = 2;            // The desired spacing in the output file (recom. 2 or 4).
+const separated     = true;         // If the flagged types should be separated or mixed in the output file.
+const logging       = false;        // Whenever it should write out the language key to the console.
+const blockKeywords = [             // If a flag matches a word here it will change the language key to be a block.
+    'block', 'ore'
+]
 
-//////////////////////// Don't edit below this ////////////////////////
+//////////////////////// Don't edit below this unless you know what you're doing ////////////////////////
 
 fs.readFile('input/' + lang, (err,data) => {
     if (err) throw err;
@@ -29,7 +33,7 @@ fs.readFile('input/' + lang, (err,data) => {
             let shouldSkip = false;
             if (element.filter)
                 for (var j=0;j<element.filter.length;j++) {
-                    if (element.filter[j] == Object.keys(json.types[i])[0] || element.filter[j] == "none") {
+                    if (element.filter[j] == Object.keys(json.types[i])[0] || element.filter[j] == 'none') {
                         shouldSkip = true;
                         break;
                     }
@@ -43,9 +47,13 @@ fs.readFile('input/' + lang, (err,data) => {
 
             translation = translation.replace("%s", element[Object.keys(element)[0]]);
 
-            let t = json.types[i].flag == "block" ? 'block.' : 'item.';
+            let t = blockKeywords.includes(json.types[i].flag) ? 'block.' : 'item.';
 
-            console.log("\"" + t + keyword + "\" : \"" + translation + "\"");
+            if (logging) {
+                console.log(line(t + keyword, translation));
+            }
+
+
             if (separated) {
                 let index = 0;
                 if (json.types[i].flag) {
@@ -61,24 +69,19 @@ fs.readFile('input/' + lang, (err,data) => {
         }
     });
 
-    const newJson = merge(JSONObjects);
-
     fs.readFile('output/' + lang, (err, data) => {
 
-        const text = JSON.stringify(newJson, null, spacing);
+        const text = JSON.stringify(separated ? merge(JSONObjects) : JSONObjects[0], null, spacing);
 
         if (!err)
             if (text == data.toString()) {
-                console.error("No changes to output/" + lang);
+                console.log('No changes to output/' + lang);
                 return;
             }
         
-        fs.writeFileSync("output/" + lang, text);
-        console.log("Wrote to output/" + lang);
+        fs.writeFileSync('output/' + lang, text);
+        console.log('Wrote to output/' + lang);
     });
 });
-
-function merge(a)
-{
-    const r = {};Object.keys(a).forEach(j => Object.keys(a[j]).forEach(key => r[key] = a[j][key]));return r;
-}
+function line(a,b) { return "\"" + a + "\" : \"" + b + "\"" }
+function merge(a) { const r = {};Object.keys(a).forEach(j => Object.keys(a[j]).forEach(key => r[key] = a[j][key]));return r; }

@@ -1,15 +1,15 @@
 {
   "name": "langgen",
   "version": "1.0.0",
-  "description": "IntercraftCore language resource generator.",
+  "description": "Minecraft language resource generator.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "minecraft",
-    "intercraft",
-    "language"
+    "language",
+    "tool"
   ],
   "author": "Simon",
   "license": "ISC"

@@ -13,7 +13,7 @@
         { "chunk" : "%s Chunk", "flag" : "chunk" },
         { "block" : "%s Block", "flag" : "block" },
         { "frame" : "%s Frame", "flag" : "block" },
-        { "ore" : "%s Ore", "flag" : "block" }
+        { "ore" : "%s Ore", "flag" : "ore" }
     ],
 
     "elements": [
@@ -29,7 +29,8 @@
         { "hg" : "Mercury",
             "filter": [ "none" ] },
         { "ir" : "Iridium" },
-        { "li" : "Lithium" },
+        { "li" : "Lithium",
+            "filter": [ "gear", "rod" ] },
         { "pb" : "Lead" },
         { "sn" : "Tin" },
         { "th" : "Thorium" },
