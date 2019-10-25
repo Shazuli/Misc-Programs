@@ -40,9 +40,9 @@
         { "zn" : "Zinc" },
 
         { "c" : "Carbón",
-            "filter": [ "plate","gear","chunk","frame" ] },
+            "filter": [ "plate","gear","chunk","frame","ore" ] },
         { "si" : "Silicio",
-            "filter": [ "ingot","nugget","plate","gear","chunk","frame" ] },
+            "filter": [ "ingot","nugget","plate","gear","chunk","frame","ore" ] },
 
         { "cusn" : "Bronce",
             "filter": [ "chunk","ore" ] },

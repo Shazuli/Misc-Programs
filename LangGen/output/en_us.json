@@ -130,7 +130,6 @@
   "item.intercraftcore.pb_chunk": "Lead Chunk",
   "item.intercraftcore.sn_chunk": "Tin Chunk",
   "item.intercraftcore.th_chunk": "Thorium Chunk",
-  "item.intercraftcore.ti_chunk": "Titanium Chunk",
   "item.intercraftcore.u_chunk": "Uranium Chunk",
   "item.intercraftcore.w_chunk": "Tungsten Chunk",
   "item.intercraftcore.zn_chunk": "Zinc Chunk",
@@ -178,10 +177,7 @@
   "block.intercraftcore.pb_ore": "Lead Ore",
   "block.intercraftcore.sn_ore": "Tin Ore",
   "block.intercraftcore.th_ore": "Thorium Ore",
-  "block.intercraftcore.ti_ore": "Titanium Ore",
   "block.intercraftcore.u_ore": "Uranium Ore",
   "block.intercraftcore.w_ore": "Tungsten Ore",
-  "block.intercraftcore.zn_ore": "Zinc Ore",
-  "block.intercraftcore.c_ore": "Carbon Ore",
-  "block.intercraftcore.si_ore": "Silicon Ore"
+  "block.intercraftcore.zn_ore": "Zinc Ore"
 }

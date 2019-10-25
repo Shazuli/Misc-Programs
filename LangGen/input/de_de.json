@@ -20,17 +20,17 @@
         { "ag" : "Silber" },
         { "al" : "Aluminium" },
         { "au" : "Gold",
-            "filter": [ "ingot", "nugget", "block" ]
+            "filter": [ "ingot","nugget","block" ]
         },
         { "cu" : "Kupfer" },
         { "fe" : "Eisen",
-            "filter": [ "ingot", "nugget", "block" ]
+            "filter": [ "ingot","nugget","block" ]
         },
         { "hg" : "Quecksilber",
             "filter": [ "none" ] },
         { "ir" : "Iridium" },
         { "li" : "Lithium",
-            "filter": [ "gear", "rod" ] },
+            "filter": [ "gear","rod" ] },
         { "pb" : "Blei" },
         { "sn" : "Zinn" },
         { "th" : "Thorium" },
@@ -40,9 +40,9 @@
         { "zn" : "Zink" },
 
         { "c" : "Kohlenstoff",
-            "filter": [ "plate","gear","chunk","frame" ] },
+            "filter": [ "plate","gear","chunk","frame","ore" ] },
         { "si" : "Silizium",
-            "filter": [ "ingot","nugget","plate","gear","chunk","frame" ] },
+            "filter": [ "ingot","nugget","plate","gear","chunk","frame","ore" ] },
 
         { "cusn" : "Bronze",
             "filter": [ "chunk","ore" ] },

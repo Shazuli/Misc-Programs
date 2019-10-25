@@ -181,7 +181,5 @@
   "block.intercraftcore.ti_ore": "Titaniummalm",
   "block.intercraftcore.u_ore": "Uraniummalm",
   "block.intercraftcore.w_ore": "Wolframmalm",
-  "block.intercraftcore.zn_ore": "Zinkmalm",
-  "block.intercraftcore.c_ore": "Kolmalm",
-  "block.intercraftcore.si_ore": "Kiselmalm"
+  "block.intercraftcore.zn_ore": "Zinkmalm"
 }

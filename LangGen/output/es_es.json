@@ -181,7 +181,5 @@
   "block.intercraftcore.ti_ore": "Titanio Ore",
   "block.intercraftcore.u_ore": "Uranio Ore",
   "block.intercraftcore.w_ore": "Tungsteno Ore",
-  "block.intercraftcore.zn_ore": "Zinc Ore",
-  "block.intercraftcore.c_ore": "Carbón Ore",
-  "block.intercraftcore.si_ore": "Silicio Ore"
+  "block.intercraftcore.zn_ore": "Zinc Ore"
 }

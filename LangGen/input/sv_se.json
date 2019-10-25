@@ -30,7 +30,7 @@
             "filter": [ "none" ] },
         { "ir" : "Iridium" },
         { "li" : "Litium",
-            "filter": [ "gear", "rod" ] },
+            "filter": [ "gear","rod" ] },
         { "pb" : "Bly" },
         { "sn" : "Tenn" },
         { "th" : "Torium" },
@@ -40,9 +40,9 @@
         { "zn" : "Zink" },
 
         { "c" : "Kol",
-            "filter": [ "plate","gear","chunk","frame" ] },
+            "filter": [ "plate","gear","chunk","frame","ore" ] },
         { "si" : "Kisel",
-            "filter": [ "ingot","nugget","plate","gear","chunk","frame" ] },
+            "filter": [ "ingot","nugget","plate","gear","chunk","frame","ore" ] },
 
         { "cusn" : "Brons",
             "filter": [ "chunk","ore" ] },
