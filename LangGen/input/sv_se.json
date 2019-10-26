@@ -13,43 +13,39 @@
         { "chunk" : "%sbit", "flag" : "chunk" },
         { "block" : "%sblock", "flag" : "block" },
         { "frame" : "%sram", "flag" : "block" },
-        { "ore" : "%smalm", "flag" : "ore" }
+        { "ore" : "%smalm", "flag" : "ore", "extension" : [
+            { "0" : "Fattig %smalm"},
+            { "1" : "Låg %smalm"},
+            { "2" : "Medium %smalm"},
+            { "3" : "Rik %smalm"}
+            
+            ] }
     ],
 
     "elements": [
-        { "ag" : "Silver" },
         { "al" : "Aluminium" },
-        { "au" : "Guld",
-            "filter": [ "ingot","nugget","block" ]
-        },
         { "cu" : "Koppar" },
-        { "fe" : "Järn",
-            "filter": [ "ingot","nugget","block" ]
-        },
-        { "hg" : "Kvicksilver",
-            "filter": [ "none" ] },
+        { "au" : "Guld", "filter": [ "ingot","nugget","block" ] },
         { "ir" : "Iridium" },
-        { "li" : "Litium",
-            "filter": [ "gear","rod" ] },
-        { "pb" : "Bly" },
-        { "sn" : "Tenn" },
-        { "th" : "Torium" },
-        { "ti" : "Titanium" },
-        { "u" : "Uranium" },
-        { "w" : "Wolfram" },
-        { "zn" : "Zink" },
+        { "fe" : "Järn", "filter": [ "ingot","nugget","block" ] },
+        { "pb" : "Bly", "filter": [ "gear" ] },
+        { "li" : "Litium", "filter": [ "gear","rod","frame" ] },
+        { "hg" : "Kvicksilver", "filter": [ "none" ] },
+        { "ni" : "Nickel", "filter": [ "gear" ] },
+        { "ag" : "Silver" },
+        { "th" : "Torium", "filter": [ "gear" ] },
+        { "sn" : "Tenn", "filter": [ "gear" ] },
+        { "ti" : "Titanium", "filter": [ "chunk","ore" ] },
+        { "w" : "Wolfram", "filter": [ "gear" ] },
+        { "u" : "Uranium", "filter": [ "gear" ] },
+        { "zn" : "Zink", "filter": [ "gear" ] },
 
-        { "c" : "Kol",
-            "filter": [ "plate","gear","chunk","frame","ore" ] },
-        { "si" : "Kisel",
-            "filter": [ "ingot","nugget","plate","gear","chunk","frame","ore" ] },
+        { "c" : "Kol", "filter": [ "plate","gear","chunk","frame","ore" ] },
+        { "si" : "Kisel", "filter": [ "ingot","nugget","plate","gear","chunk","frame","ore" ] },
 
-        { "cusn" : "Brons",
-            "filter": [ "chunk","ore" ] },
-        { "cuzn" : "Mässing",
-            "filter": [ "chunk","ore" ] },
-        { "fec" : "Stål",
-            "filter": [ "chunk","ore" ] }
+        { "cuzn" : "Mässing", "filter": [ "chunk","ore" ] },
+        { "cusn" : "Brons", "filter": [ "chunk","ore" ] },
+        { "fec" : "Stål", "filter": [ "chunk","ore" ] }
 
     ]
 }

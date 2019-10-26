@@ -10,7 +10,7 @@
 const fs = require('fs');
 
 
-const lang          = 'en_us.json'; // Change this to the desired language file name in input/.
+const lang          = 'sv_se.json'; // Change this to the desired language file name in input/.
 const spacing       = 2;            // The desired spacing in the output file (recom. 2 or 4).
 const separated     = true;         // If the flagged types should be separated or mixed in the output file.
 const logging       = false;        // Whenever it should write out the language key to the console.
@@ -42,30 +42,59 @@ fs.readFile('input/' + lang, (err,data) => {
 
             if (shouldSkip) continue;
 
-            let translation = json.types[i][Object.keys(json.types[i])[0]];
-            let keyword = json.domain + "." + Object.keys(element)[0] + "_" + Object.keys(json.types[i])[0];
-
-            translation = translation.replace("%s", element[Object.keys(element)[0]]);
+            let ext = json.types[i].extension ? json.types[i].extension.length : 1;
 
             let t = blockKeywords.includes(json.types[i].flag) ? 'block.' : 'item.';
 
-            if (logging) {
-                console.log(line(t + keyword, translation));
+            let translationSimp = json.types[i][Object.keys(json.types[i])[0]];
+            let keywordSimp = json.domain + "." + Object.keys(element)[0] + "_" + Object.keys(json.types[i])[0];
+
+            translationSimp = translationSimp.replace("%s", element[Object.keys(element)[0]]);
+
+            if (logging) {                    
+                console.log(line(t + keywordSimp, translationSimp));
             }
 
-
-            if (separated) {
-                let index = 0;
-                if (json.types[i].flag) {
-                    index = json.types[i].flag;
-                    if (JSONObjects[index] == undefined) {
-                        JSONObjects[index] = {};
-                    }
-                }                
-                JSONObjects[index][t + keyword] = translation;
+            if (ext > 1) {
+                if (separated) {
+                    let index = 0;
+                    if (json.types[i].flag) {
+                        index = json.types[i].flag;
+                        if (JSONObjects[index] == undefined) {
+                            JSONObjects[index] = {};
+                        }
+                    }                
+                    JSONObjects[index][t + keywordSimp] = translationSimp;
+                }
+                else
+                    JSONObjects[0][t + keywordSimp] = translationSimp;
             }
-            else
-                JSONObjects[0][t + keyword] = translation;
+
+            for (let k=0;k<ext;k++) {
+            
+                let translation = ext > 1 ? json.types[i].extension[k][Object.keys(json.types[i].extension[k])] : translationSimp;
+                let keyword = keywordSimp + (ext > 1 ? "."+ Object.keys(json.types[i].extension[k]) : "");
+
+                translation = translation.replace("%s", element[Object.keys(element)[0]]);
+
+                if (logging) {                    
+                    console.log(line(t + keyword, translation));
+                }
+
+
+                if (separated) {
+                    let index = 0;
+                    if (json.types[i].flag) {
+                        index = json.types[i].flag;
+                        if (JSONObjects[index] == undefined) {
+                            JSONObjects[index] = {};
+                        }
+                    }                
+                    JSONObjects[index][t + keyword] = translation;
+                }
+                else
+                    JSONObjects[0][t + keyword] = translation;
+            }
         }
     });
 

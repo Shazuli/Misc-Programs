@@ -13,43 +13,39 @@
         { "chunk" : "%s Chunk", "flag" : "chunk" },
         { "block" : "%s Block", "flag" : "block" },
         { "frame" : "%s Frame", "flag" : "block" },
-        { "ore" : "%s Ore", "flag" : "ore" }
+        { "ore" : "%s Ore", "flag" : "ore", "extension" : [
+            { "0" : "Poor %s Ore"},
+            { "1" : "Low %s Ore"},
+            { "2" : "Medium %s Ore"},
+            { "3" : "Rich %s Ore"}
+            
+            ] }
     ],
 
     "elements": [
-        { "ag" : "Silber" },
         { "al" : "Aluminium" },
-        { "au" : "Gold",
-            "filter": [ "ingot","nugget","block" ]
-        },
         { "cu" : "Kupfer" },
-        { "fe" : "Eisen",
-            "filter": [ "ingot","nugget","block" ]
-        },
-        { "hg" : "Quecksilber",
-            "filter": [ "none" ] },
+        { "au" : "Gold", "filter": [ "ingot","nugget","block" ] },
         { "ir" : "Iridium" },
-        { "li" : "Lithium",
-            "filter": [ "gear","rod" ] },
-        { "pb" : "Blei" },
-        { "sn" : "Zinn" },
-        { "th" : "Thorium" },
-        { "ti" : "Titanium" },
-        { "u" : "Uranium" },
-        { "w" : "Tungsten" },
-        { "zn" : "Zink" },
+        { "fe" : "Eisen", "filter": [ "ingot","nugget","block" ] },
+        { "pb" : "Blei", "filter": [ "gear" ] },
+        { "li" : "Lithium", "filter": [ "gear","rod" ] },
+        { "hg" : "Quecksilber", "filter": [ "none" ] },
+        { "ni" : "Nickel", "filter": [ "gear" ] },
+        { "ag" : "Silber" },
+        { "th" : "Thorium", "filter": [ "gear" ] },
+        { "sn" : "Zinn", "filter": [ "gear" ] },
+        { "ti" : "Titanium", "filter": [ "chunk","ore" ] },
+        { "w" : "Tungsten", "filter": [ "gear" ] },
+        { "u" : "Uranium", "filter": [ "gear" ] },
+        { "zn" : "Zink", "filter": [ "gear" ] },
 
-        { "c" : "Kohlenstoff",
-            "filter": [ "plate","gear","chunk","frame","ore" ] },
-        { "si" : "Silizium",
-            "filter": [ "ingot","nugget","plate","gear","chunk","frame","ore" ] },
+        { "c" : "Kohlenstoff", "filter": [ "plate","gear","chunk","frame","ore" ] },
+        { "si" : "Silizium", "filter": [ "ingot","nugget","plate","gear","chunk","frame","ore" ] },
 
-        { "cusn" : "Bronze",
-            "filter": [ "chunk","ore" ] },
-        { "cuzn" : "Messing",
-            "filter": [ "chunk","ore" ] },
-        { "fec" : "Stahl",
-            "filter": [ "chunk","ore" ] }
+        { "cuzn" : "Messing", "filter": [ "chunk","ore" ] },
+        { "cusn" : "Bronze", "filter": [ "chunk","ore" ] },
+        { "fec" : "Stahl", "filter": [ "chunk","ore" ] }
 
     ]
 }
