@@ -13,7 +13,7 @@
         { "chunk" : "Pedaço de %s", "flag" : "chunk" },
         { "block" : "Bloco de %s", "flag" : "block" },
         { "frame" : "Armação de %s", "flag" : "block" },
-        { "ore" : "%s Minério", "flag" : "ore", "extension" : [
+        { "ore" : "Minério de %s", "flag" : "ore", "extension" : [
             { "0" : "Pobre minério de %s"},
             { "1" : "Baixo minério de %s"},
             { "2" : "Médio minério de %s"},
