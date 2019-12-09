@@ -1,0 +1,15 @@
+{
+  "name": "jsoncloner",
+  "version": "0.0.1",
+  "description": "A tool to create clones of off a blueprint json with json base and string replacement.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "json",
+    "cloner"
+  ],
+  "author": "Simon",
+  "license": "ISC"
+}

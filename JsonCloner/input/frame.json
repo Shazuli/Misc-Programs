@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "frame",
+  "pattern": [
+    "###",
+    "I I",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "DOMAIN:INPUT_plate"
+    },
+    "I": {
+      "item": "DOMAIN:INPUT_rod"
+    }
+  },
+  "result": {
+    "item": "DOMAIN:OUTPUT_frame"
+  }
+}

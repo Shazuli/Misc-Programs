@@ -1,0 +1,170 @@
+{
+    "domain" : "intercraftcore",
+
+    "keys": {
+        "frame" : {
+            "json": "input/frame.json",
+            "in"  : "INPUT",
+            "out" : "OUTPUT"
+        },
+        "bfi" : {
+            "json": "input/3x3_2_1.json",
+            "in"  : "INPUT_ingot",
+            "out" : "OUTPUT_block"
+        },
+        "ifn" : {
+            "json": "input/3x3_2_1.json",
+            "in"  : "INPUT_nugget",
+            "out" : "OUTPUT_ingot"
+        },
+        "dfds" : {
+            "json": "input/3x3_2_1.json",
+            "in"  : "INPUT_dustsmall",
+            "out" : "OUTPUT_dust"
+        },
+        "ifblo" : {
+            "json": "input/1x1_2_9.json",
+            "in"  : "INPUT_block",
+            "out" : "OUTPUT_ingot"
+        },
+        "nfi" : {
+            "json": "input/1x1_2_9.json",
+            "in"  : "INPUT_ingot",
+            "out" : "OUTPUT_nugget"
+        },
+        "dsfd" : {
+            "json": "input/1x1_2_9.json",
+            "in"  : "INPUT_dust",
+            "out" : "OUTPUT_dustsmall"
+        },
+        
+        "iiffd" : {
+            "json": "input/furnace/furnace_iron_ingot.json",
+            "in"  : "INPUT_dust"
+        },
+        "iifblad" : {
+            "json": "input/furnace/blast_furnace_iron_ingot.json",
+            "in"  : "INPUT_dust"
+        },
+        "giffd" : {
+            "json": "input/furnace/furnace_gold_ingot.json",
+            "in"  : "INPUT_dust"
+        },
+        "gifblad" : {
+            "json": "input/furnace/blast_furnace_gold_ingot.json",
+            "in"  : "INPUT_dust"
+        },
+        "iffd" : {
+            "json": "input/furnace/furnace.json",
+            "in"  : "INPUT_dust",
+            "out" : "INPUT_ingot"
+        },
+        "ifblad" : {
+            "json": "input/furnace/blast_furnace.json",
+            "in"  : "INPUT_dust",
+            "out" : "INPUT_ingot"
+        }
+    },
+    
+    "elements": {
+
+        "al": [
+            "frame",
+            "bfi","ifn","dfds","ifblo","nfi","dsfd",
+            "iffd","ifblad"
+        ],
+        "cu": [
+            "frame",
+            "bfi","ifn","dfds","ifblo","nfi","dsfd",
+            "iffd","ifblad"
+        ],
+        "au": [
+            "frame",
+            "dfds","dsfd",
+            "giffd","gifblad"
+        ],
+        "ir": [
+            "frame",
+            "bfi","ifn","dfds","ifblo","nfi","dsfd",
+            "iffd","ifblad"
+        ],
+        "fe": [
+            "frame",
+            "dfds","dsfd",
+            "iiffd","iifblad"
+        ],
+        "pb": [
+            "frame",
+            "bfi","ifn","dfds","ifblo","nfi","dsfd",
+            "iffd","ifblad"
+        ],
+        "li": [
+            "bfi","ifn","dfds","ifblo","nfi","dsfd"
+        ],
+        "hg": [
+            
+        ],
+        "ni": [
+            "frame",
+            "bfi","ifn","dfds","ifblo","nfi","dsfd",
+            "iffd","ifblad"
+        ],
+        "ag": [
+            "frame",
+            "bfi","ifn","dfds","ifblo","nfi","dsfd",
+            "iffd","ifblad"
+        ],
+        "th": [
+            "frame",
+            "bfi","ifn","dfds","ifblo","nfi","dsfd",
+            "iffd","ifblad"
+        ],
+        "sn": [
+            "frame",
+            "bfi","ifn","dfds","ifblo","nfi","dsfd",
+            "iffd","ifblad"
+        ],
+        "ti": [
+            "frame",
+            "bfi","ifn","dfds","ifblo","nfi","dsfd",
+            "iffd","ifblad"
+        ],
+        "w": [
+            "frame",
+            "bfi","ifn","dfds","ifblo","nfi","dsfd",
+            "iffd","ifblad"
+        ],
+        "u": [
+            "frame",
+            "bfi","ifn","dfds","ifblo","nfi","dsfd",
+            "iffd","ifblad"
+        ],
+        "zn": [
+            "frame",
+            "bfi","ifn","dfds","ifblo","nfi","dsfd",
+            "iffd","ifblad"
+        ],
+        "c": [
+            "dfds","dsfd",
+            "iffd","ifblad"
+        ],
+        "si": [
+            "dfds","dsfd"
+        ],
+        "cuzn": [
+            "frame",
+            "bfi","ifn","dfds","ifblo","nfi","dsfd",
+            "iffd","ifblad"
+        ],
+        "cusn": [
+            "frame",
+            "bfi","ifn","dfds","ifblo","nfi","dsfd",
+            "iffd","ifblad"
+        ],
+        "fec": [
+            "frame",
+            "bfi","ifn","dfds","ifblo","nfi","dsfd",
+            "ifblad"
+        ]
+    }
+}

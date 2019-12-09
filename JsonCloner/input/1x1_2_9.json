@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "GROUP",
+  "ingredients": [
+    {
+      "item": "DOMAIN:INPUT"
+    }
+  ],
+  "result": {
+    "item": "DOMAIN:OUTPUT",
+    "count": 9
+  }
+}
