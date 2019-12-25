@@ -10,11 +10,11 @@
 const fs = require('fs');
 
 
-const lang          = 'sv_se.json'; // Change this to the desired language file name in input/.
-const spacing       = 2;            // The desired spacing in the output file (recom. 2 or 4).
-const separated     = true;         // If the flagged types should be separated or mixed in the output file.
-const logging       = false;        // Whenever it should write out the language key to the console.
-const blockKeywords = [             // If a flag matches a word here it will change the language key to be a block.
+const lang          = 'coloured/en_us.json'; // Change this to the desired language file name in input/.
+const spacing       = 2;                     // The desired spacing in the output file (recom. 2 or 4).
+const separated     = true;                  // If the flagged types should be separated or mixed in the output file.
+const logging       = false;                 // Whenever it should write out the language key to the console (good for debugging).
+const blockKeywords = [                      // If a flag matches a word here it will change the language key to be a block.
     'block', 'ore'
 ]
 
@@ -42,12 +42,13 @@ fs.readFile('input/' + lang, (err,data) => {
 
             if (shouldSkip) continue;
 
-            let ext = json.types[i].extension ? json.types[i].extension.length : 1;
+            let ext = json.types[i].extension ? json.types[i].extension.length : -1;
+            let h = ext == -1 ? 1 : json.types[i].extension.length+1;
 
             let t = blockKeywords.includes(json.types[i].flag) ? 'block.' : 'item.';
 
             let translationSimp = json.types[i][Object.keys(json.types[i])[0]];
-            let keywordSimp = json.domain + "." + Object.keys(element)[0] + "_" + Object.keys(json.types[i])[0];
+            let keywordSimp = Object.keys(json.types[i])[0].includes("%s") ? json.domain + "." + Object.keys(json.types[i])[0].replace("%s",Object.keys(element)[0]) : json.domain + "." + Object.keys(element)[0] + "_" + Object.keys(json.types[i])[0];
 
             translationSimp = translationSimp.replace("%s", element[Object.keys(element)[0]]);
 
@@ -55,7 +56,7 @@ fs.readFile('input/' + lang, (err,data) => {
                 console.log(line(t + keywordSimp, translationSimp));
             }
 
-            if (ext > 1) {
+            if (ext != -1) {
                 if (separated) {
                     let index = 0;
                     if (json.types[i].flag) {
@@ -70,10 +71,11 @@ fs.readFile('input/' + lang, (err,data) => {
                     JSONObjects[0][t + keywordSimp] = translationSimp;
             }
 
-            for (let k=0;k<ext;k++) {
+
+            for (let k=0;k<h;k++) {
             
-                let translation = ext > 1 ? json.types[i].extension[k][Object.keys(json.types[i].extension[k])] : translationSimp;
-                let keyword = keywordSimp + (ext > 1 ? "."+ Object.keys(json.types[i].extension[k]) : "");
+                let translation = k > 0 ? json.types[i].extension[k-1][Object.keys(json.types[i].extension[k-1])] : translationSimp;
+                let keyword = keywordSimp + (k > 0 ? "."+ Object.keys(json.types[i].extension[k-1]) : "");
 
                 translation = translation.replace("%s", element[Object.keys(element)[0]]);
 

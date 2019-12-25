@@ -1,0 +1,34 @@
+{
+
+    "domain": "intercraftcore",
+
+    "types": [
+        { "hazmat_helmet" : "%s Haz-Mat Helmet" },
+        { "hazmat_chestplate" : "%s Haz-Mat Chestplate" },
+        { "hazmat_pants" : "%s Haz-Mat Pants" },
+        { "hazmat_boots" : "%s Haz-Mat Boots" },
+        { "large_%s_glass_jar" : "Large %s Stained Glass Jar","flag" : "jar", "extension" : [
+            { "full" : "Large %s Stained Glass Jar (%s)" }
+            ]
+        }
+    ],
+
+    "elements": [
+        { "white" : "White" },
+        { "orange" : "Orange" },
+        { "magenta" : "Magenta" },
+        { "light_blue" : "Light Blue" },
+        { "yellow" : "Yellow" },
+        { "lime" : "Lime" },
+        { "pink" : "Pink" },
+        { "gray" : "Gray" },
+        { "light_gray" : "Light Gray" },
+        { "cyan" : "Cyan" },
+        { "purple" : "Purple" },
+        { "blue" : "Blue" },
+        { "brown" : "Brown" },
+        { "green" : "Green" },
+        { "red" : "Red" },
+        { "black" : "Black" }
+    ]
+}

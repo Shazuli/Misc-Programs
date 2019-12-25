@@ -1,0 +1,52 @@
+{
+
+    "domain": "intercraftcore",
+
+    "types": [
+        { "ingot" : "%s Ingot" },
+        { "nugget" : "%s Nugget" },
+        { "dust" : "%s Dust" },
+        { "dustsmall" : "Tiny Pile of %s" },
+        { "plate" : "%s Plate" },
+        { "gear" : "%s Gear" },
+        { "rod" : "%s Rod" },
+        { "chunk" : "%s Chunk", "flag" : "chunk" },
+        { "block" : "%s Block", "flag" : "block" },
+        { "frame" : "%s Frame", "flag" : "block" },
+        { "ore" : "%s Ore", "flag" : "ore", "extension" : [
+            { "0" : "Poor %s Ore"},
+            { "1" : "Low %s Ore"},
+            { "2" : "Medium %s Ore"},
+            { "3" : "Rich %s Ore"}
+            
+            ]
+        }
+    ],
+
+    "elements": [
+        { "al" : "Aluminium" },
+        { "cu" : "Copper" },
+        { "au" : "Gold", "filter": [ "ingot","nugget","block" ] },
+        { "ir" : "Iridium" },
+        { "fe" : "Iron", "filter": [ "ingot","nugget","block" ] },
+        { "pb" : "Lead", "filter": [ "gear" ] },
+        { "li" : "Lithium", "filter": [ "gear","rod","frame" ] },
+        { "hg" : "Mercury", "filter": [ "none" ] },
+        { "ni" : "Nickel", "filter": [ "gear" ] },
+        { "ag" : "Silver" },
+        { "th" : "Thorium", "filter": [ "gear" ] },
+        { "sn" : "Tin", "filter": [ "gear" ] },
+        { "ti" : "Titanium", "filter": [ "chunk","ore" ] },
+        { "w" : "Tungsten", "filter": [ "gear" ] },
+        { "u" : "Uranium", "filter": [ "gear" ] },
+        { "zn" : "Zinc", "filter": [ "gear" ] },
+
+        { "c" : "Carbon", "filter": [ "plate","gear","chunk","frame","ore" ] },
+        { "si" : "Silicon", "filter": [ "ingot","nugget","plate","gear","chunk","frame","ore" ] },
+
+        { "cuzn" : "Brass", "filter": [ "chunk","ore" ] },
+        { "cusn" : "Bronze", "filter": [ "chunk","ore" ] },
+        { "fec" : "Steel", "filter": [ "chunk","ore" ] }
+
+    ]
+}

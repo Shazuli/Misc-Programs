@@ -1,0 +1,53 @@
+{
+
+    "domain": "intercraftcore",
+
+    "types": [
+        { "ingot" : "Barra de %s" },
+        { "nugget" : "Pepita de %s" },
+        { "dust" : "Pó de %s" },
+        { "dustsmall" : "Pequena pilha de %s" },
+        { "plate" : "Chapa de %s" },
+        { "gear" : "Engrenagem de %s" },
+        { "rod" : "Vara de %s" },
+        { "chunk" : "Pedaço de %s", "flag" : "chunk" },
+        { "block" : "Bloco de %s", "flag" : "block" },
+        { "frame" : "Armação de %s", "flag" : "block" },
+        { "ore" : "Minério de %s", "flag" : "ore", "extension" : [
+            { "0" : "Pobre minério de %s"},
+            { "1" : "Baixo minério de %s"},
+            { "2" : "Médio minério de %s"},
+            { "3" : "Minério rico de %s"}
+            
+            ]
+        }
+    ],
+
+    "elements": [
+        { "al" : "Alumínio" },
+        { "cu" : "Cobre" },
+        { "au" : "Ouro", "filter": [ "ingot","nugget","block" ] },
+        { "ir" : "Irídio" },
+        { "fe" : "Ferro", "filter": [ "ingot","nugget","block" ] },
+        { "pb" : "Chumbo", "filter": [ "gear" ] },
+        { "li" : "Litío", "filter": [ "gear","rod","frame" ] },
+        { "hg" : "Mercurio", "filter": [ "none" ] },
+        { "ni" : "Niquel", "filter": [ "gear" ] },
+        { "ag" : "Prata" },
+        { "th" : "Tório", "filter": [ "gear" ] },
+        { "sn" : "Estanho", "filter": [ "gear" ] },
+        { "ti" : "Titánio", "filter": [ "chunk","ore" ] },
+        { "w" : "Tungsténio", "filter": [ "gear" ] },
+        { "u" : "Urânio", "filter": [ "gear" ] },
+        { "zn" : "Zinco", "filter": [ "gear" ] },
+
+        { "c" : "Carbono", "filter": [ "plate","gear","chunk","frame","ore" ] },
+        { "si" : "Silicone", "filter": [ "ingot","nugget","plate","gear","chunk","frame","ore" ] },
+
+        { "cuzn" : "Latão", "filter": [ "chunk","ore" ] },
+        { "cusn" : "Bronze", "filter": [ "chunk","ore" ] },
+        { "fec" : "Aço", "filter": [ "chunk","ore" ] }
+
+    ]
+}
+
