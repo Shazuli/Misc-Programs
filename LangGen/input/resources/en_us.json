@@ -46,6 +46,7 @@
 
         { "cuzn" : "Brass", "filter": [ "chunk","ore" ] },
         { "cusn" : "Bronze", "filter": [ "chunk","ore" ] },
+        { "agau" : "Electrum", "filter": [ "chunk","ore" ] },
         { "fec" : "Steel", "filter": [ "chunk","ore" ] }
 
     ]
