@@ -1,0 +1,12 @@
+#tri {
+    border:1px solid #000000;
+}
+
+body {
+    margin-top: 2%;
+    text-align: center;
+}
+
+.values > div {
+    margin: 1rem;
+}
