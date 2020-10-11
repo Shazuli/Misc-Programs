@@ -1,0 +1,55 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Calculate Triangle</title>
+		<script src="script.js"></script>
+		<script src="Triangle.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<canvas id="tri" width="600" height="600"></canvas>
+		<div class="values">
+			<div>
+				<label for="a">a=</label>
+				<input type="number" step="any" id="a">
+			</div>
+			<div>
+				<label for="b">b=</label>
+				<input type="number" step="any" id="b">
+			</div>
+			<div>
+				<label for="c">c=</label>
+				<input type="number" step="any" id="c">
+			</div>
+			<div>
+				<label for="A">A=</label>
+				<input type="number" step="any" id="A">
+				<select name="mode" id="modeA">
+					<option value="degree">Degrees</option>
+					<option value="radian">Radians</option>
+				</select>
+			</div>
+			<div>
+				<label for="B">B=</label>
+				<input type="number" step="any" id="B">
+				<select name="mode" id="modeB">
+					<option value="degree">Degrees</option>
+					<option value="radian">Radians</option>
+				</select>
+			</div>
+			<div>
+				<label for="C">C=</label>
+				<input type="number" step="any" id="C">
+				<select name="mode" id="modeC">
+					<option value="degree">Degrees</option>
+					<option value="radian">Radians</option>
+				</select>
+			</div>
+			<div>
+				<label for="area">Area=</label>
+				<input type="number" step="any" id="area">
+			</div>
+		</div>
+		<input type="button" value="Calculate" id="calc">
+	</body>
+</html>
