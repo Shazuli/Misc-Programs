@@ -22,15 +22,15 @@ class Triangle {
         return true;
     }
 
-    getValue(v) {
+    getValue(v,inDegrees) {
         switch (v) {
-            case 'A': return this.A || 0;
-            case 'B': return this.B || 0;
-            case 'C': return this.C || 0;
+            case 'A': return inDegrees ? round(toDeg(this.A),3) : this.A || 0;
+            case 'B': return inDegrees ? round(toDeg(this.B),3) : this.B || 0;
+            case 'C': return inDegrees ? round(toDeg(this.C),3) : this.C || 0;
 
-            case 'a': return this.a || 0;
-            case 'b': return this.b || 0;
-            case 'c': return this.c || 0;
+            case 'a': return round(this.a,3) || 0;
+            case 'b': return round(this.b,3) || 0;
+            case 'c': return round(this.c,3) || 0;
 
             case 'T': return this.T || 0;
 
@@ -66,7 +66,7 @@ class Triangle {
         let values = this.hasValues();
 
         if (this.canCalc("BC",values)) {
-            this.A = 180 - (this.B + this.C);
+            this.A = Math.PI - (this.B + this.C);
 
         } else if (this.canCalc("BcT",values)) {
             this.A = Math.asin(2*this.T/this.b*this.c); // Fix.
@@ -88,7 +88,7 @@ class Triangle {
         let values = this.hasValues();
 
         if (this.canCalc("AC",values)) {
-            this.B = 180 - (this.A + this.C);
+            this.B = Math.PI - (this.A + this.C);
 
         } else if (this.canCalc("acT",values)) {
             this.B = Math.asin((2*this.T)/(this.a*this.c)); // Fix.
@@ -110,7 +110,7 @@ class Triangle {
         let values = this.hasValues();
 
         if (this.canCalc("AB",values)) {
-            this.C = 180 - (this.A + this.B);
+            this.C = Math.PI - (this.A + this.B);
 
         } else if (this.canCalc("abT",values)) {
             this.C = Math.asin(2*this.T/this.a*this.b); // Fix.
@@ -167,7 +167,7 @@ class Triangle {
             this.b = 2*this.T/(this.c*Math.sin(this.A));
 
         } else if (this.canCalc("ABa",values)) {
-            this.b = (sin(this.B)*this.a)/Math.sin(this.A);
+            this.b = (Math.sin(this.B)*this.a)/Math.sin(this.A);
 
         } else if (this.canCalc("BCc",values)) {
             this.b = (Math.sin(this.B)*this.c)/Math.sin(this.C);
