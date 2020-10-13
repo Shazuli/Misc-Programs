@@ -1,0 +1,66 @@
+{
+
+    "recipes": {
+        "thaumcraft:nitor": {
+            "input": "minecraft:glowstone_dust",
+            "aspects": {
+                "ignis": 10,
+                "potentia": 10,
+                "lux": 10
+            }
+        }
+    },
+
+    "items": {
+        "minecraft:coal": {
+            "ignis": 10,
+            "potentia": 10
+        },
+        "minecraft:torch": {
+            "ignis": 1,
+            "potentia": 1,
+            "lux": 5
+        }
+    },
+
+    "aspects": [
+        "aer",
+        "terra",
+        "ignis",
+        "aqua",
+        "ordo",
+        "perditio",
+        "vacuos",
+        "lux",
+        "motus",
+        "gelum",
+        "vitreus",
+        "metallum",
+        "victus",
+        "mortuus",
+        "potentia",
+        "permutatio",
+        "tempestas",
+        "praecantatio",
+        "auram",
+        "alkimia",
+        "vitium",
+        "tenebrae",
+        "alienis",
+        "volatus",
+        "herba",
+        "instrumentum",
+        "fabrico",
+        "machina",
+        "vinculum",
+        "spiritus",
+        "cognitio",
+        "sensus",
+        "aversio",
+        "praemunio",
+        "desiderium",
+        "exanimis",
+        "bestia",
+        "humanus"
+    ]
+}

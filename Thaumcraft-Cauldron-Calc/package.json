@@ -1,0 +1,17 @@
+{
+  "name": "npm",
+  "version": "0.0.1",
+  "description": "A calculator for Thaumcraft's crucible to reduce waste generated.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "thaumcraft",
+    "crucible",
+    "essentia",
+    "aspect"
+  ],
+  "author": "Simon",
+  "license": "ISC"
+}

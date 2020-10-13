@@ -2,26 +2,29 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Calculate Triangle</title>
+		<script type="text/javascript">
+			var timer = Date.now();
+		</script>
 		<script src="script.js"></script>
 		<script src="Triangle.js"></script>
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body>
-		<canvas id="tri" width="600" height="600"></canvas>
+		<canvas id="tri" width="500" height="500"></canvas>
 		<div class="values">
-			<div>
+			<div class="length">
 				<label for="a">a=</label>
 				<input type="number" step="any" id="a">
 			</div>
-			<div>
+			<div class="length">
 				<label for="b">b=</label>
 				<input type="number" step="any" id="b">
 			</div>
-			<div>
+			<div class="length">
 				<label for="c">c=</label>
 				<input type="number" step="any" id="c">
 			</div>
-			<div>
+			<div class="angle">
 				<label for="A">A=</label>
 				<input type="number" step="any" id="A">
 				<select name="mode" id="modeA">
@@ -29,7 +32,7 @@
 					<option value="radian">Radians</option>
 				</select>
 			</div>
-			<div>
+			<div class="angle">
 				<label for="B">B=</label>
 				<input type="number" step="any" id="B">
 				<select name="mode" id="modeB">
@@ -37,7 +40,7 @@
 					<option value="radian">Radians</option>
 				</select>
 			</div>
-			<div>
+			<div class="angle">
 				<label for="C">C=</label>
 				<input type="number" step="any" id="C">
 				<select name="mode" id="modeC">
@@ -45,9 +48,9 @@
 					<option value="radian">Radians</option>
 				</select>
 			</div>
-			<div>
-				<label for="area">Area=</label>
-				<input type="number" step="any" id="area">
+			<div class="area">
+				<label for="T">T=</label>
+				<input type="number" step="any" id="T">
 			</div>
 		</div>
 		<input type="button" value="Calculate" id="calc">

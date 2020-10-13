@@ -7,10 +7,8 @@
  * By Simon
  */
 
-const fs = require('fs');
 
-
-const lang          = 'coloured/en_us.json'; // Change this to the desired language file name in input/.
+const lang          = 'en_us.json';// Change this to the desired language file name in input/.
 const spacing       = 2;                     // The desired spacing in the output file (recom. 2 or 4).
 const separated     = true;                  // If the flagged types should be separated or mixed in the output file.
 const logging       = false;                 // Whenever it should write out the language key to the console (good for debugging).
@@ -18,13 +16,26 @@ const blockKeywords = [                      // If a flag matches a word here it
     'block', 'ore'
 ]
 
-//////////////////////// Don't edit below this unless you know what you're doing ////////////////////////
+//////////////////////// Don't edit below this unless you know what you are doing ////////////////////////
 
-fs.readFile('input/' + lang, (err,data) => {
-    if (err) throw err;
-    const json = JSON.parse(data);
+nodejsEnv()
+
+function nodejsEnv() {
+    const fs = require('fs');
+    fs.readFile('input/' + lang, (err,data) => {
+        if (err)
+            throw new Error('Error reading file!\n'+err.message);
+        json2file(lang,text2json(data),fs);
+    });
+}
+
+function text2json(text) {
+    const json = JSON.parse(text);
 
     let JSONObjects = [{}];
+
+    if (!json.elements)
+        throw new Error('Could not find "elements" key in '+lang+'!');
 
     json.elements.forEach(element => {
 
@@ -45,7 +56,7 @@ fs.readFile('input/' + lang, (err,data) => {
             let ext = json.types[i].extension ? json.types[i].extension.length : -1;
             let h = ext == -1 ? 1 : json.types[i].extension.length+1;
 
-            let t = blockKeywords.includes(json.types[i].flag) ? 'block.' : 'item.';
+            let t = blockKeywords.includes(json.types[i].flag) || blockKeywords.includes(element.flag) ? 'block.' : 'item.';
 
             let translationSimp = json.types[i][Object.keys(json.types[i])[0]];
             let keywordSimp = Object.keys(json.types[i])[0].includes("%s") ? json.domain + "." + Object.keys(json.types[i])[0].replace("%s",Object.keys(element)[0]) : json.domain + "." + Object.keys(element)[0] + "_" + Object.keys(json.types[i])[0];
@@ -99,20 +110,31 @@ fs.readFile('input/' + lang, (err,data) => {
             }
         }
     });
+    return JSONObjects;
+}
 
-    fs.readFile('output/' + lang, (err, data) => {
+function json2file(file,json,fs) {
+    fs.readFile('output/'+file, (err, data) => {
 
-        const text = JSON.stringify(separated ? merge(JSONObjects) : JSONObjects[0], null, spacing);
+        const text = JSON.stringify(separated ? merge(json) : json[0], null, spacing);
+        const path = lang.substr(0,lang.lastIndexOf('/'));
 
-        if (!err)
+        if (!fs.existsSync('output/'+path)) {
+            if (logging) console.log('Missing output directory, creating ..');
+            fs.mkdirSync('output/'+path, {recursive: true});
+        }
+
+        if (!err) {
             if (text == data.toString()) {
                 console.log('No changes to output/' + lang);
                 return;
             }
+        }
         
-        fs.writeFileSync('output/' + lang, text);
-        console.log('Wrote to output/' + lang);
+        fs.writeFileSync('output/'+file, text);
+        console.log('Wrote to output/' + file);
     });
-});
+}
+
 function line(a,b) { return "\"" + a + "\" : \"" + b + "\"" }
 function merge(a) { const r = {};Object.keys(a).forEach(j => Object.keys(a[j]).forEach(key => r[key] = a[j][key]));return r; }

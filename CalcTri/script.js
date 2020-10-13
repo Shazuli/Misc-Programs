@@ -23,7 +23,7 @@ document.addEventListener('readystatechange', event => {
         ec = R("c");
         ec.setAttribute("min",Number.MIN_VALUE)
         
-        eT = R("area");
+        eT = R("T");
         eT.setAttribute("min",Number.MIN_VALUE)
 
         canvas = R("tri");
@@ -79,14 +79,60 @@ document.addEventListener('readystatechange', event => {
                 getNum(ea.value),getNum(eb.value),getNum(ec.value),
                 getNum(eT.value)
             );
-            if (triangle.calc_T()) {
-                eT.value = triangle.getValue('T');
 
-            } else {
-                console.log("Not enough data.")
+
+            let vals = triangle.hasValues();
+
+            console.log("Has values : \"%s\".",vals);
+
+            //while (!(vals.includes('A') && vals.includes('B') && vals.includes('C'))) { // Calc corners.
+
+            if (triangle.calc_A()) {
+                if (mA.value == "degree") {
+                    eA.value = triangle.getValue('A',true);
+                } else {
+                    eA.value = triangle.getValue('A');
+                }
             }
 
-            console.log("Done.")
+            if (triangle.calc_B()) {
+                if (mB.value == "degree") {
+                    eB.value = triangle.getValue('B',true);
+                } else {
+                    eB.value = triangle.getValue('B');
+                }
+            }
+
+            if (triangle.calc_C()) {
+                if (mC.value == "degree") {
+                    eC.value = triangle.getValue('C',true);
+                } else {
+                    eC.value = triangle.getValue('C');
+                }
+            }
+
+            if (triangle.calc_a()) {
+                ea.value = triangle.getValue('a');
+            }
+
+            if (triangle.calc_b()) {
+                eb.value = triangle.getValue('b');
+            }
+
+            if (triangle.calc_c()) {
+                ec.value = triangle.getValue('c');
+            }
+
+            if (triangle.calc_T()) {
+                eT.value = triangle.getValue('T');
+            }
+            
+
+            //vals = triangle.hasValues();
+            let newVals = triangle.hasValues();
+
+            console.log("Calculated values \"%s\".",subtractString(newVals,vals));
+
         });
 
         triangle = new Triangle(
@@ -95,16 +141,16 @@ document.addEventListener('readystatechange', event => {
             getNum(eT.value)
         );
 
-        l = "HTML.";
+        l = "HTML";
 
     } else if (event.target.readyState === "complete") { // When window loaded (external resources are loaded too- css,src)
         
         
         
-        l = "Window.";
+        l = "Window";
     }
 
-    console.log("Finished loading "+l);
+    console.info("Finished loading %s in %s m/s.",l,Date.now()-timer);
 
 });
 
@@ -129,17 +175,28 @@ function getRad(v) {
     return m.value == "degree" ? toRad(getNum(e.value)) : getNum(e.value);
 }
 
+function subtractString(str, sub) {
+    for (let c of sub)
+        if (str.includes(c))
+            str = str.replace(c,'');
+    return str;
+}
+
 function round(v,dec) {
     const d = Math.pow(10,dec);
     return Math.round(v * d) / d;
 }
 
 function toDeg(rad) {
-    return rad*(180/Math.PI);
+    let a = rad*(180/Math.PI);
+    console.debug("%s -deg-> %s",rad,a);
+    return a;
 }
 
 function toRad(deg) {
-    return deg*(Math.PI/180);
+    let a = deg*(Math.PI/180);
+    console.debug("%s -rad-> %s",deg,a);
+    return a;
 }
 
 function getNum(str) {

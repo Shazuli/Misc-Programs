@@ -1,0 +1,40 @@
+{
+
+    "domain": "opencomputers",
+
+    "types": [
+        { "%s_tier1" : "%s (Tier 1)" },
+		{ "%s_tier2" : "%s (Tier 2)" },
+		{ "%s_tier3" : "%s (Tier 3)" }
+    ],
+
+    "elements": [
+		
+        { "hologram" : "Hologram Projector", "filter": [ "%s_tier3" ], "flag": "block" },
+        { "screen" : "Screen", "flag": "block" },
+		{ "case" : "Computer Case", "flag": "block" },
+
+		{ "case_drone" : "Drone Case", "filter": [ "%s_tier3" ] },
+		{ "case_microcontroller" : "Microcontroller Case", "filter": [ "%s_tier3" ] },
+		{ "server" : "Server" },
+
+		{ "apu" : "Accelerated Processing Unit (APU)", "filter": [ "%s_tier1" ] },
+        { "component_bus" : "Component Bus" },
+        { "cpu" : "Central Processing Unit (CPU)" },
+        { "gpu" : "Graphics Card" },
+        { "hdd" : "Hard Disk Drive" },
+        { "microship" : "Microchip" },
+		{ "case_tablet" : "Tablet Case", "filter": [ "%s_tier3" ] },
+
+		{ "upgrade_battery" : "Battery Upgrade" },
+		{ "upgrade_container_card" : "Card Container" },
+		{ "upgrade_container_upgrade" : "Upgrade Container" },
+		{ "upgrade_database" : "Database Upgrade" },
+		{ "upgrade_hover" : "Hover Upgrade", "filter": [ "%s_tier3" ] },
+
+		{ "card_data" : "Data Card" },
+		{ "card_redstone" : "Redstone Card", "filter": [ "%s_tier3" ] },
+		{ "card_network_wireless" : "Wireless Network Card", "filter": [ "%s_tier3" ] }
+
+    ]
+}
