@@ -1,12 +1,56 @@
-#tri {
-    border:1px solid #000000;
-}
-
 body {
-    margin-top: 2%;
+
     text-align: center;
+
+    margin-top: 1%;
+    background: rgb(167,235,197);
+    background: radial-gradient(circle, rgb(167,235,197) 0%, rgb(32,74,25) 95%);
 }
 
-.values > div {
-    margin: 1rem;
+.values > div, #calc {
+    margin-top: 9px;
+}
+
+.length, .angle, .area, #tri {
+
+    border-radius: 6px;
+    border-style: solid;
+    border-color: rgb(2, 53, 2);
+    
+    box-shadow: inset 0px 0px 24px 4px rgba(204,204,204,1);
+    
+    background: white;
+    width: 450px;
+    padding: 20px;
+
+    margin: auto;
+}
+
+.length > *, .angle > *, .area > * {
+    text-align: left;
+    margin-left: 20%;
+}
+
+label {
+    letter-spacing: 14px;
+}
+
+input[type=number] {
+    appearance: textfield;
+}
+
+label, input[type=number] {
+    font-family: sans-serif;
+}
+
+#calc {
+    margin-bottom: 16px;
+    background-color: darkgreen;
+    color: white;
+    border: none;
+    display: inline-block;
+    font-size: 24px;
+
+    width: 140px;
+    height: 60px;
 }
