@@ -10,49 +10,56 @@
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body>
-		<canvas id="tri" width="500" height="500"></canvas>
+		<canvas id="tri" width="450" height="450"></canvas>
 		<div class="values">
+			<input type="button" value="Calculate" id="calc">
+
 			<div class="length">
-				<label for="a">a=</label>
-				<input type="number" step="any" id="a">
-			</div>
-			<div class="length">
-				<label for="b">b=</label>
-				<input type="number" step="any" id="b">
-			</div>
-			<div class="length">
-				<label for="c">c=</label>
-				<input type="number" step="any" id="c">
+				<div>
+					<label for="a">a=</label>
+					<input type="number" step="any" id="a">
+				</div>
+				<div>
+					<label for="b">b=</label>
+					<input type="number" step="any" id="b">
+				</div>
+				<div>
+					<label for="c">c=</label>
+					<input type="number" step="any" id="c">
+				</div>
 			</div>
 			<div class="angle">
-				<label for="A">A=</label>
-				<input type="number" step="any" id="A">
-				<select name="mode" id="modeA">
-					<option value="degree">Degrees</option>
-					<option value="radian">Radians</option>
-				</select>
-			</div>
-			<div class="angle">
-				<label for="B">B=</label>
-				<input type="number" step="any" id="B">
-				<select name="mode" id="modeB">
-					<option value="degree">Degrees</option>
-					<option value="radian">Radians</option>
-				</select>
-			</div>
-			<div class="angle">
-				<label for="C">C=</label>
-				<input type="number" step="any" id="C">
-				<select name="mode" id="modeC">
-					<option value="degree">Degrees</option>
-					<option value="radian">Radians</option>
-				</select>
+				<div>
+					<label for="A">A=</label>
+					<input type="number" step="any" id="A">
+					<select name="mode" id="modeA">
+						<option value="degree">Degrees</option>
+						<option value="radian">Radians</option>
+					</select>
+				</div>
+				<div>
+					<label for="B">B=</label>
+					<input type="number" step="any" id="B">
+					<select name="mode" id="modeB">
+						<option value="degree">Degrees</option>
+						<option value="radian">Radians</option>
+					</select>
+				</div>
+				<div>
+					<label for="C">C=</label>
+					<input type="number" step="any" id="C">
+					<select name="mode" id="modeC">
+						<option value="degree">Degrees</option>
+						<option value="radian">Radians</option>
+					</select>
+				</div>
 			</div>
 			<div class="area">
-				<label for="T">T=</label>
-				<input type="number" step="any" id="T">
+				<div>
+					<label for="T">T=</label>
+					<input type="number" step="any" id="T">
+				</div>
 			</div>
 		</div>
-		<input type="button" value="Calculate" id="calc">
 	</body>
 </html>
