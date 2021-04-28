@@ -10,5 +10,5 @@ for (let i=0;i<Deno.args.length;i++) {
 		console.log(Deno.args[i]+" is not a valid number, skipping..");
 		continue;
 	}
-	console.log(n+" -> "+b(a(n)));
+	console.log(n+" -> "+b(a(n,4)));
 }
